@@ -18,11 +18,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
           USERNAME: kexindon
           MAX_REPOS: 10
-          SETTING_JSON: |
-            {
-              "type": "season-anime",
-              "utcOffset": -5
-            }
+          SETTING_JSON: '{"type":"season-anime","utcOffset":-5}'
       - name: Commit & Push
         run: |
           git config user.email "action@github.com"
