@@ -14,8 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Write settings file
-        run: echo '{"type":"season","utcOffset":-5}' > /tmp/setting.json
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.4
+        run: echo '{"type":"normal","utcOffset":-5}' > /tmp/setting.json
+      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
           USERNAME: kexindon
