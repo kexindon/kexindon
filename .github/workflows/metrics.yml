@@ -13,14 +13,10 @@ jobs:
     name: generate-github-profile-3d-contrib
     steps:
       - uses: actions/checkout@v4
-      - name: Write settings file
-        run: echo '{"type":"normal","utcOffset":-5}' > /tmp/setting.json
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
           USERNAME: kexindon
-          MAX_REPOS: 10
-          SETTING_JSON: /tmp/setting.json
       - name: Commit & Push
         run: |
           git config user.email "action@github.com"
